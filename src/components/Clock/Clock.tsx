@@ -6,9 +6,13 @@ export const Clock = React.memo(() => {
     const [date, setDate] = useState(new Date())
 
     useEffect(() => {
-        setInterval(() => {
+        const intervalID = setInterval(() => {
             setDate(new Date())
         }, 1000)
+
+        return () => {
+            clearInterval(intervalID)
+        }
     }, []);
     return (
 
