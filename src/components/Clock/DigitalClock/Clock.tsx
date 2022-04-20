@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {AnalogClock} from "./AnalogClock";
+import {AnalogClock} from "../AnalogClock/AnalogClock";
 
 const get2digitsString = (num: number) => num < 10 ? '0' + num : num
 
